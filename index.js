@@ -26,8 +26,6 @@ function request(path, trufalse, extraquere){
                 extra = "?key=" + key
             }
         }
-        
-        console.log(`https://api.hypixel.net${path}${extra}`)
         https.get(`https://api.hypixel.net${path}${extra}`).then(res => {
             if(res.data){
                 resp = res.data
